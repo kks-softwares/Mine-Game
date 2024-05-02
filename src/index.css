@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+  font-family: "Space Grotesk", sans-serif;
+}
+
+:root{
+  background: #000;
+}
+
+#root{
+  background: #000;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.tower-page {
+  background-color: #202020;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.tower-bet-box {
+  background: #202020;
+  padding: 20px;
+}
+
+.tower-game-section.mines-game {
+  background: #292929;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow: hidden;
+  padding: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.play-btn {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center;
+  background: linear-gradient(225deg, #77ffa8, #ffe081 33%, #ffad8e 68%, #a592ff) !important;
+  border: none !important;
+  border-radius: 7px;
+  box-shadow: none;
+  color: #121b24 !important;
+  font-weight: 500;
+  height: 60px;
+  line-height: 23px;
+  padding: 10px 20px;
+  text-align: center;
+  transition: all .5s;
+  width: 100%;
+}
+
+.play-btn .play-text {
+  flex: 1;
+  font-size: 26px;
+}
+
+.play-btn span.auto-mode-icon {
+  font-size: 30px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background-color: white;
+  /* Set the background color of the slider button to white */
+  border: 1px solid #ccc;
+  /* Add a border for better visibility */
+  border-radius: 50%;
+  /* Make the slider button round */
+  cursor: pointer;
+  /* Show pointer cursor on hover */
+  height: 20px;
+  width: 20px;
+}
+
+.diamond-tiles {
+  background: #444;
+  height: 85px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+.mines-label {
+  font-size: 16px;
+  /* Adjust font size as needed */
+  margin-bottom: 10px;
+  /* Adjust margin as needed */
+  transition: transform 0.3s ease;
+  /* Add transition for smooth animation */
+}
+
+.mines-range {
+  width: 100%;
+  /* Adjust width as needed */
+}
+
+.greenDiamond {
+  background: #5b6b5b;
+  border: 2px solid #0aec0a;
+}
+
+
+.containera {
+  display: flex;
+}
+
+.rowaside {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.columnaside {
+  flex: 0 0 calc(20% - 20px); /* 20% to make 5 columns, minus 20px for gap */
+  padding: 2px;
+  margin: 5px; /* Adjust margin as needed */
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .columnaside {
+    flex: 0 0 calc(21.33% - 80px); /* 33.33% for 3 columns per row on smaller screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .columnaside {
+    flex: 0 0 calc(21% - 20px); /* 50% for 2 columns per row on extra small screens */
+  }
+}
+
+
+.custom-button {
+  background-color: #292929; /* Blue color, change as needed */
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid gray;
+  border-radius: 5px;
+}
+
+.custom-button .left {
+  color: #e0e0e0;
+  font-weight: 700;
+  background: gray;
+  padding: 1px 8px;
+}
+
+.custom-button .right {
+  color: #e0e0e0;
+  font-weight: 600;
+  background: gray;
+  padding: 1px 8px;
+}
+
+.custom-button .stake-text{
+  color: gray;
+}
+
+.mines-winner-loss {
+  background: linear-gradient(225deg,#77ffa8,#ffe081 33%,#ffad8e 68%,#a592ff);
+  border-radius: 14px;
+  box-shadow: 0 0 10px rgba(73,217,111,.4);
+  left: 50%;
+  max-width: 209px;
+  padding: 3px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+
+.mines-winner-grid {
+  align-items: center;
+  background: #202020;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  padding: 54px;
+  color:'#fff'
+}
+
+.mines-winner-loss h6 {
+  align-items: center;
+  color: #909090;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  position: relative;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.mines-winner-grid h6, .mines-winner-grid p {
+  -webkit-text-fill-color: transparent;
+  white-space-collapse: collapse;
+  text-wrap: nowrap;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(225deg,#77ffa8,#ffe081 33%,#ffad8e 68%,#a592ff);
+  background-repeat: repeat;
+  background-size: 100%;
+  margin: 0;
+  text-align: center;
+}
