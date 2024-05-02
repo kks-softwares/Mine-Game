@@ -6,7 +6,6 @@ import { BiSolidBomb } from "react-icons/bi";
 import { RiVipDiamondFill } from "react-icons/ri";
 
 function App() {
-
   const [show, setShow] = useState(false);
   const [showGameWin, setShowGameWin] = useState(false);
 
@@ -48,7 +47,7 @@ function App() {
     const updatedTilesArray = tilesArray.map(tile => {
       if (tile.id === id) {
         if (tile.isBomb) {
-          setGameOver(true); // Set gameOver state to true if a bomb is revealed
+          setGameOver(true);
           setShow(true);
         } else {
           const revealedTiles = tilesArray.filter(tile => tile.isRevealed);
@@ -57,7 +56,6 @@ function App() {
             setGameWon(true);
           }
           setCashout(true);
-          // setShowGameWin(true);
         }
         return { ...tile, label: tile.isBomb ? <BiSolidBomb style={{ fontSize: 40, color: 'gray' }} /> : <RiVipDiamondFill style={{ fontSize: 40, color: '#89ef89' }} />, isRevealed: true };
       }
@@ -140,7 +138,7 @@ function App() {
       </div>
       <>
         <Modal show={show} onHide={handleClose} size="sm" centered aria-labelledby="contained-modal-title-vcenter">
-        <div className='mines-winner-loss'>
+          <div className='mines-winner-loss'>
             <div className='mines-winner-grid'>
               <h6 style={{ color: '#fff' }}>YOU LOST!</h6>
             </div>
