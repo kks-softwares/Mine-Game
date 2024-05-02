@@ -140,7 +140,7 @@ function App() {
         <Modal show={show} onHide={handleClose} size="sm" centered aria-labelledby="contained-modal-title-vcenter">
           <div className='mines-winner-loss'>
             <div className='mines-winner-grid'>
-              <h6 style={{ color: '#fff' }}>YOU LOST!</h6>
+              <p style={{ color: '#fff' }}>YOU LOST!</p>
             </div>
           </div>
         </Modal>
@@ -148,7 +148,7 @@ function App() {
         <Modal show={showGameWin} onHide={handleCloseGameWin} size="sm" centered aria-labelledby="contained-modal-title-vcenter">
           <div className='mines-winner-loss'>
             <div className='mines-winner-grid'>
-              <h6 style={{ color: '#fff' }}>YOU WIN</h6>
+              <p style={{ color: '#fff' }}>YOU WIN</p>
             </div>
           </div>
         </Modal>

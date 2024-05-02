@@ -206,7 +206,6 @@ input[type="range"]::-webkit-slider-thumb {
   gap: 5px;
   justify-content: center;
   padding: 54px;
-  color:'#fff'
 }
 
 .mines-winner-loss h6 {
@@ -231,4 +230,9 @@ input[type="range"]::-webkit-slider-thumb {
   background-size: 100%;
   margin: 0;
   text-align: center;
+}
+
+.mines-winner-grid p {
+  font-size: 40px;
+  letter-spacing: -2px;
 }
