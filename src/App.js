@@ -122,7 +122,6 @@ function App() {
                   </div>
                 </button>
               </div>
-
             </div>
           </div>
           <div className="col-12 col-sm-12 col-md-8 col-lg-8">
